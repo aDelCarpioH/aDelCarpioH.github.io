@@ -1,11 +1,14 @@
-html
-{
+html{
     background-color: #FEFCF3;
     font-family: 'Libre Baskerville', serif;
 }
 
-p
-{
+p{
     line-height: 2;
     text-align: justify;
+}
+
+.center .materialboxed,
+.center-align .materialboxed {
+    margin: 0 auto; position: relative !important;
 }
