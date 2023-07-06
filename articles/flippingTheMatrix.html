@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ4T5ESETK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZJ4T5ESETK');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIPPING THE MATRIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     
+    <link rel="stylesheet" href="../css/normalize.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <link rel="icon" href="../images/icon.ico">
+</head>
+<body>
+
+    <div class="container">
+        <div class="section">
+            <H1><a href="https://adelcarpioh.github.io">ALDO'S PORTAFOLIO</a></H1>
+           
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+            <H2>FLIPPING THE MATRIX</H2>
+            
+            <p>
+                I used to follow the learning path from https://www.hackerrank.com/, in this opportunity I want to talk 
+                about the Flipping the Matrix problem, which is qualified as a medium  level problem.
+            </p>
+
+            <p>
+                To solve this problem I had to do some research, because at the beginning I had some problems understanding 
+                the problem definition. After this research I understood the goal problem is to get maximum value from the 
+                left top location of a square array.
+            </p>
+
+            <p>
+                I found a lot of webpages but the most clear information for me is this 
+                <a href="https://medium.com/@mlgerardvla/hackerrank-flipping-the-matrix-javascript-7f945220ca1b">webpage</a>, the blogger propose 
+                to assign letters for each square section of the array, but I couldn’t understand the logic behind the letter 
+                distribution.
+            </p>
+            
+            <p>
+                After expending some time in the problem definition and the blog solution I could get why this distribution was used, 
+                is because the blogger used the reverse functionality in the whole square, let me explain this using the next pictures:
+            </p>
+
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5" style="width: 80%;" src="flippingTheMatrixImages/array1.png" alt="">
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5" style="width: 80%;" src="flippingTheMatrixImages/array2.png" alt="">
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5" style="width: 80%;" src="flippingTheMatrixImages/array3.png" alt="">
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5" style="width: 80%;" src="flippingTheMatrixImages/array4.png" alt="">
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5" style="width: 80%;" src="flippingTheMatrixImages/array5.png" alt="">
+            <p>At the end we can see the different positions of the target letters.</p>
+
+            <h3>MY OWN SOLUTION</h3>
+            
+            <p>
+                After realizing the reason for this letter distribution, I propose my own solution for this problem, 
+                where I use the reverse functionality to move each quadrant to the target quadrant. <br>
+                Using 3x3 target quadrant:
+            </p>
+
+            <div class="row">
+                <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5 col s6"  src="flippingTheMatrixImages/quadrant1Terminal.png" alt="">
+                <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5 col s6"  src="flippingTheMatrixImages/quadrant2Terminal.png" alt="">
+            </div>
+            <div class="row">
+                <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5 col s6"  src="flippingTheMatrixImages/quadrant3Terminal.png" alt="">
+                <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5 col s6"  src="flippingTheMatrixImages/quadrant4Terminal.png" alt="">
+            </div>
+
+            <p>
+                These methods below allows you to reverse the rows and columns as the images above shows:
+            </p>
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5"  src="flippingTheMatrixImages/imagenReverseMethods.png" alt="">
+
+            <p>The next method allows you compare two matrix and get a new matrix with max values per each position:</p>
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5"  src="flippingTheMatrixImages/matrixHighValues.png" alt="">
+
+            <p>This last method sum all matrix position:</p>
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5"  src="flippingTheMatrixImages/sumMatrix.png" alt="">
+
+            <p>All this methods are used in this last method, where the solution is implemented:</p>
+            <img class="materialboxed center-block responsive-img animated zoomIn z-depth-5"  src="flippingTheMatrixImages/solution.png" alt="">
+
+            <h3>References</h3>
+            <p>
+                <a href="https://medium.com/@mlgerardvla/hackerrank-flipping-the-matrix-javascript-7f945220ca1b">https://medium.com/@mlgerardvla/hackerrank-flipping-the-matrix-javascript-7f945220ca1b</a><br />
+                <a href="https://www.hackerrank.com/challenges/flipping-the-matrix/problem" target="_blank">https://www.hackerrank.com/challenges/flipping-the-matrix/problem</a><br />
+            </p>
+
+            <h3>Repository</h3>
+            <p>
+                <a href="https://github.com/aDelCarpioH/FlippingTheMatrix">https://github.com/aDelCarpioH/FlippingTheMatrix</a>
+            </p>
+        </div>
+        
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/jsCustom.js"></script>
+</body>
+</html>
